@@ -1,0 +1,36 @@
+[submodule "_repos/Bunco"]
+	path = _repos/Bunco
+	url = https://github.com/ChromaPIE/Bunco-ZHCN-Locale.git
+[submodule "_repos/Steamodded"]
+	path = _repos/Steamodded
+	url = https://github.com/ChromaPIE/Steamodded.git
+[submodule "_repos/D6-Jokers"]
+	path = _repos/D6-Jokers
+	url = https://github.com/ChromaPIE/D6-Jokers.git
+[submodule "_repos/LobotomyCorp"]
+	path = _repos/LobotomyCorp
+	url = https://github.com/ChromaPIE/LobotomyCorp.git
+[submodule "_repos/Cryptid"]
+	path = _repos/Cryptid
+	url = https://github.com/ChromaPIE/Cryptid.git
+[submodule "_repos/098-Cardsauce"]
+	path = _repos/098-Cardsauce
+	url = https://github.com/ChromaPIE/Cardsauce.git
+[submodule "_repos/twewy"]
+	path = _repos/twewy
+	url = https://github.com/ChromaPIE/The-World-Ends-With-Jimbo.git
+[submodule "_repos/MikasBalatro"]
+	path = _repos/MikasBalatro
+	url = https://github.com/ChromaPIE/MikasBalatro-ZHCN-Locale.git
+[submodule "_repos/Betmma"]
+	path = _repos/Betmma
+	url = https://github.com/ChromaPIE/betmma-mods-ZHCN-Locale.git
+[submodule "_repos/098-DX-Tarots"]
+	path = _repos/098-DX-Tarots
+	url = https://github.com/ChromaPIE/DX-Tarots-ZHCN-Locale.git
+[submodule "_repos/MystBlinds"]
+	path = _repos/MystBlinds
+	url = https://github.com/ChromaPIE/MystBlinds.git
+[submodule "_repos/MathBlinds"]
+	path = _repos/MathBlinds
+	url = https://github.com/ChromaPIE/MathBlinds.git
