@@ -40,3 +40,6 @@
 [submodule "_repos/aiz-balatro-mod"]
 	path = _repos/aiz-balatro-mod
 	url = https://github.com/ChromaPIE/aiz-balatro-mod-ZHCN-Locale.git
+[submodule "_repos/CruelBlinds"]
+	path = _repos/CruelBlinds
+	url = https://github.com/ChromaPIE/Cruel-Blinds.git
