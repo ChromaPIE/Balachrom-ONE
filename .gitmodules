@@ -34,3 +34,9 @@
 [submodule "_repos/MathBlinds"]
 	path = _repos/MathBlinds
 	url = https://github.com/ChromaPIE/MathBlinds.git
+[submodule "_repos/Ortalab"]
+	path = _repos/Ortalab
+	url = https://github.com/ChromaPIE/Ortalab-DEMO.git
+[submodule "_repos/aiz-balatro-mod"]
+	path = _repos/aiz-balatro-mod
+	url = https://github.com/ChromaPIE/aiz-balatro-mod-ZHCN-Locale.git
