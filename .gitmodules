@@ -43,3 +43,9 @@
 [submodule "_repos/CruelBlinds"]
 	path = _repos/CruelBlinds
 	url = https://github.com/ChromaPIE/Cruel-Blinds.git
+[submodule "_repos/CheesyJokers"]
+	path = _repos/CheesyJokers
+	url = https://github.com/ChromaPIE/CheesyJokers.git
+[submodule "_repos/CodexArcanum"]
+	path = _repos/CodexArcanum
+	url = https://github.com/ChromaPIE/Codex-Arcanum-ZHCN-Locale.git
