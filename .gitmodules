@@ -49,3 +49,6 @@
 [submodule "_repos/CodexArcanum"]
 	path = _repos/CodexArcanum
 	url = https://github.com/ChromaPIE/Codex-Arcanum-ZHCN-Locale.git
+[submodule "_repos/SDM0"]
+	path = _repos/SDM0
+	url = https://github.com/ChromaPIE/Balatro-Mods.git
