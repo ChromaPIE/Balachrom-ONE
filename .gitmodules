@@ -52,3 +52,6 @@
 [submodule "_repos/SDM0"]
 	path = _repos/SDM0
 	url = https://github.com/ChromaPIE/Balatro-Mods.git
+[submodule "_repos/Ro-Balatro"]
+	path = _repos/Ro-Balatro
+	url = https://github.com/ChromaPIE/Ro-Balatro.git
