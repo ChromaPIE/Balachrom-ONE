@@ -55,3 +55,6 @@
 [submodule "_repos/Ro-Balatro"]
 	path = _repos/Ro-Balatro
 	url = https://github.com/ChromaPIE/Ro-Balatro.git
+[submodule "_repos/SoulCraft"]
+	path = _repos/SoulCraft
+	url = https://github.com/ChromaPIE/SoulCraft.git
