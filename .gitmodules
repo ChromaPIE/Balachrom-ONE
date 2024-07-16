@@ -58,3 +58,9 @@
 [submodule "_repos/SoulCraft"]
 	path = _repos/SoulCraft
 	url = https://github.com/ChromaPIE/SoulCraft.git
+[submodule "_repos/JokerEvolution"]
+	path = _repos/JokerEvolution
+	url = https://github.com/ChromaPIE/Joker-Evolution.git
+[submodule "_repos/BonusBlinds"]
+	path = _repos/BonusBlinds
+	url = https://github.com/ChromaPIE/BonusBlinds.git
