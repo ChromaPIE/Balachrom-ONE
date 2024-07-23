@@ -64,3 +64,9 @@
 [submodule "_repos/BonusBlinds"]
 	path = _repos/BonusBlinds
 	url = https://github.com/ChromaPIE/BonusBlinds.git
+[submodule "_repos/Aura"]
+	path = _repos/Aura
+	url = https://github.com/ChromaPIE/Aura.git
+[submodule "_repos/KCVanilla"]
+	path = _repos/KCVanilla
+	url = https://github.com/ChromaPIE/kcvanilla.git
