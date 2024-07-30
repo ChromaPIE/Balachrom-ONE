@@ -5,7 +5,7 @@ on:
     branches:
       - overlord
     paths:
-      - 'Mods/**'
+      - '_repos/**'
       - 'resources/**'
       - 'localization/**'
       - '.github/workflows/package.yml'
@@ -22,15 +22,21 @@ jobs:
         submodules: true
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Per-mod files/directories clean-up
+    - name: Per-mod re-arranging
       run: |
         echo "Start re-arranging mod files..."
+
+        mv -f _repos Mods
+
 
     - name: Universal unwanted files/directories removal
       run: |
         echo "Start deleting redundant files..."
 
-        rm -rf .gitignore .gitmodules .github
+        rm -rf .git .github .gitignore .gitmodules
+        find . -type f -iname '*.md' -exec rm -f {} +
+        find . -type f -iname 'LICENSE' -exec rm -f {} +
+
         find ./Mods -maxdepth 2 -type f -name 'icon.png' -exec rm -f {} +
         find ./Mods -maxdepth 2 -type f -name 'index.html' -exec rm -f {} +
         find ./Mods -maxdepth 2 -type f -name 'm6x11plus.ttf' -exec rm -f {} +
@@ -44,14 +50,12 @@ jobs:
         find . -type f -name '*.bat' -exec rm -f {} +
         find . -type f -name '*.ps1' -exec rm -f {} +
         find . -type f -name '.git' -exec rm -rf {} +
-        find . -type f -iname 'LICENSE' -exec rm -f {} +
+        
         find . -type f -iname 'style.css' -exec rm -f {} +
-        find . -type f -iname 'README.md' -exec rm -f {} +
         find . -type f -iname 'README.asc' -exec rm -f {} +
         find . -type f -name '.gitignore' -exec rm -rf {} +
-        find . -type f -iname 'changelog.md' -exec rm -f {} +
         find . -type f -iname 'addjokers.js' -exec rm -f {} +
-        find . -type f -iname 'CHANGELOG.md' -exec rm -f {} +
+        
         find . -type f -iname 'manifest.json' -exec rm -f {} +
         find . -type f -name '.gitattributes' -exec rm -rf {} +
         find . -type f -iname 'generate_sprite.fish' -exec rm -f {} +

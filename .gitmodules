@@ -13,9 +13,6 @@
 [submodule "_repos/Cryptid"]
 	path = _repos/Cryptid
 	url = https://github.com/ChromaPIE/Cryptid.git
-[submodule "_repos/098-Cardsauce"]
-	path = _repos/098-Cardsauce
-	url = https://github.com/ChromaPIE/Cardsauce.git
 [submodule "_repos/twewy"]
 	path = _repos/twewy
 	url = https://github.com/ChromaPIE/The-World-Ends-With-Jimbo.git
