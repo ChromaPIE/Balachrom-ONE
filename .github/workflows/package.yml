@@ -3,7 +3,7 @@ name: Package Repository
 on:
   push:
     branches:
-      - overlord
+      - main
     paths:
       - '_repos/**'
       - 'resources/**'
@@ -26,39 +26,60 @@ jobs:
       run: |
         echo "Start re-arranging mod files..."
 
-        mv -f _repos Mods
+        mv _repos Mods
+        cd Mods
 
+        rm -rf Betmma/5_legendary_challenges
+
+        mv BonusBlinds/BonusBlinds/* BonusBlinds/
+
+        mv CheesyJokers/CheesyJokers/* CheesyJokers/
+
+        mv CodexArcanum/mod .
+        rm -rf CodexArcanum
+        mv mod CodexArcanum
+
+        mv CruelBlinds/CruelBlinds_1_0_0 .
+        rm -rf CruelBlinds
+        mv CruelBlinds_1_0_0 CruelBlinds
+
+        mkdir je_t
+        mv JokerEvolution/JokerEvolution/* je_t
+        rm -rf JokerEvolution
+        mv je_t JokerEvolution
+
+        rm -rf KCVanilla/scripts
+
+        mv "SDM0/SDM_0's Stuff" "SDM_0's Stuff"
+        rm -rf SDM0
+
+        rm -rf Steamodded/example_mods
 
     - name: Universal unwanted files/directories removal
       run: |
         echo "Start deleting redundant files..."
-
-        rm -rf .git .github .gitignore .gitmodules
-        find . -type f -iname '*.md' -exec rm -f {} +
+        rm -rf .git .gitmodules
+        pushd ./Mods
+        find . -maxdepth 2 -type f -name 'icon.png' -exec rm -f {} +
+        find . -maxdepth 2 -type f -name 'm6x11plus.ttf' -exec rm -f {} +
+        find . -maxdepth 2 -type f -name 'manifest.json' -exec rm -f {} +
+        popd
         find . -type f -iname 'LICENSE' -exec rm -f {} +
-
-        find ./Mods -maxdepth 2 -type f -name 'icon.png' -exec rm -f {} +
-        find ./Mods -maxdepth 2 -type f -name 'index.html' -exec rm -f {} +
-        find ./Mods -maxdepth 2 -type f -name 'm6x11plus.ttf' -exec rm -f {} +
-        find . -type d -name '.git' -exec rm -rf {} +
+        find . -type f -iname 'TODO' -exec rm -f {} +
+        find . -type f -iname '*.md' -exec rm -f {} +
+        find . -type f -iname '*.fish' -exec rm -f {} +
+        find . -type f -iname '*.asc' -exec rm -f {} +
+        find . -type f -iname '*.html' -exec rm -f {} +
+        find . -type f -iname '*.js' -exec rm -f {} +
+        find . -type f -iname '*.css' -exec rm -f {} +
+        find . -type f -iname '.git' -exec rm -f {} +
+        find . -type f -iname '.luarc.json' -exec rm -f {} +
+        find . -type f -iname '.gitignore' -exec rm -f {} +
+        find . -type f -iname '.gitattributes' -exec rm -f {} +
         find . -type d -name 'site' -exec rm -rf {} +
-        find . -type d -name '.github' -exec rm -rf {} +
-        find . -type d -name '.vscode' -exec rm -rf {} +
+        find . -type d -iname '.vscode' -exec rm -rf {} +
+        find . -type d -iname '.github' -exec rm -rf {} +
         find . -type d -name 'gitresources' -exec rm -rf {} +
-        find . -type f -name '*.py' -exec rm -f {} +
-        find . -type f -name '*.sh' -exec rm -f {} +
-        find . -type f -name '*.bat' -exec rm -f {} +
-        find . -type f -name '*.ps1' -exec rm -f {} +
-        find . -type f -name '.git' -exec rm -rf {} +
-        
-        find . -type f -iname 'style.css' -exec rm -f {} +
-        find . -type f -iname 'README.asc' -exec rm -f {} +
-        find . -type f -name '.gitignore' -exec rm -rf {} +
-        find . -type f -iname 'addjokers.js' -exec rm -f {} +
-        
-        find . -type f -iname 'manifest.json' -exec rm -f {} +
-        find . -type f -name '.gitattributes' -exec rm -rf {} +
-        find . -type f -iname 'generate_sprite.fish' -exec rm -f {} +
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4.3.3
