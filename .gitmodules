@@ -23,7 +23,7 @@
 	path = _repos/Betmma
 	url = https://github.com/ChromaPIE/betmma-mods-ZHCN-Locale.git
 [submodule "_repos/098_DX-Tarots"]
-	path = _repos/098-DX-Tarots
+	path = _repos/098_DX-Tarots
 	url = https://github.com/ChromaPIE/DX-Tarots-ZHCN-Locale.git
 [submodule "_repos/MystBlinds"]
 	path = _repos/MystBlinds
@@ -67,3 +67,9 @@
 [submodule "_repos/KCVanilla"]
 	path = _repos/KCVanilla
 	url = https://github.com/ChromaPIE/kcvanilla.git
+[submodule "_repos/098_5CEBalatro"]
+	path = _repos/098_5CEBalatro
+	url = https://github.com/ChromaPIE/5CEBalatro.git
+[submodule "_repos/098_FusionJokers"]
+	path = _repos/098_FusionJokers
+	url = https://github.com/ChromaPIE/Fusion-Jokers.git

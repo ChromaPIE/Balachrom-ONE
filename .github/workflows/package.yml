@@ -28,17 +28,22 @@ jobs:
         echo "Start re-arranging mod files..."
 
         mv _repos Mods
+        mv custom_misc/* Mods
         cd Mods
 
         rm -rf Betmma/5_legendary_challenges
 
         mv BonusBlinds/BonusBlinds/* BonusBlinds/
 
-        mv CheesyJokers/CheesyJokers/* CheesyJokers/
+        mv CheesyJokers/CheesyJokers 098_CheesyJokers
+        rmdir CheesyJokers
 
-        mv CodexArcanum/mod .
+        mv CodexArcanum/mod 098_Codex_Arcanum
         rm -rf CodexArcanum
-        mv mod CodexArcanum
+
+        mv 098_FusionJokers/mod .
+        rm -rf 098_FusionJokers
+        mv mod 098_FusionJokers
 
         mv CruelBlinds/CruelBlinds_1_0_0 .
         rm -rf CruelBlinds
@@ -61,9 +66,10 @@ jobs:
         echo "Start deleting redundant files..."
         rm -rf .git .gitmodules
         pushd ./Mods
-        find . -maxdepth 2 -type f -name 'icon.png' -exec rm -f {} +
-        find . -maxdepth 2 -type f -name 'm6x11plus.ttf' -exec rm -f {} +
-        find . -maxdepth 2 -type f -name 'manifest.json' -exec rm -f {} +
+        find . -maxdepth 2 -type f -iname '*.py' -exec rm -f {} +
+        find . -maxdepth 2 -type f -iname 'icon.png' -exec rm -f {} +
+        find . -maxdepth 2 -type f -iname 'm6x11plus.ttf' -exec rm -f {} +
+        find . -maxdepth 2 -type f -iname 'manifest.json' -exec rm -f {} +
         popd
         find . -type f -iname 'LICENSE' -exec rm -f {} +
         find . -type f -iname 'TODO' -exec rm -f {} +
