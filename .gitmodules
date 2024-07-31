@@ -22,7 +22,7 @@
 [submodule "_repos/Betmma"]
 	path = _repos/Betmma
 	url = https://github.com/ChromaPIE/betmma-mods-ZHCN-Locale.git
-[submodule "_repos/098-DX-Tarots"]
+[submodule "_repos/098_DX-Tarots"]
 	path = _repos/098-DX-Tarots
 	url = https://github.com/ChromaPIE/DX-Tarots-ZHCN-Locale.git
 [submodule "_repos/MystBlinds"]

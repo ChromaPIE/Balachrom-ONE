@@ -8,6 +8,7 @@ on:
       - '_repos/**'
       - 'resources/**'
       - 'localization/**'
+      - '.gitmodules'
       - '.github/workflows/package.yml'
   workflow_dispatch:
 
