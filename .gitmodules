@@ -97,3 +97,6 @@
 [submodule "_repos/StickersAlwaysShown"]
 	path = _repos/StickersAlwaysShown
 	url = https://github.com/SirMaiquis/Balatro-Stickers-Always-Shown.git
+[submodule "_repos/098_BossJokers"]
+	path = _repos/098_BossJokers
+	url = https://github.com/ChromaPIE/BossJokers.git
