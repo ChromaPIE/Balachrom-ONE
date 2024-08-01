@@ -75,7 +75,7 @@ jobs:
         mv Myst/Steamodded/MystJokers 098_MystJokers
         rm -rf Myst
 
-        curl -L https://raw.githubusercontent.com/happinyz/BalatroFoldButton/main/FoldButton.lua -o .
+        curl -LO https://raw.githubusercontent.com/happinyz/BalatroFoldButton/main/FoldButton.lua
 
     - name: Universal unwanted files/directories removal
       run: |
