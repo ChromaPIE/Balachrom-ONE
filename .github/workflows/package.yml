@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Get current time
+      run: echo "TIMESTAMP=$(date +%s)" >> $GITHUB_ENV
+
     - name: Checkout repository
       uses: actions/checkout@v4.1.5
       with:
@@ -27,8 +30,12 @@ jobs:
       run: |
         echo "Start re-arranging mod files..."
 
+        mv mod_loc/Cartomancer/* _repos/Cartomancer/localization/
+        rm -rf mod_loc
+
         mv _repos Mods
         mv custom_misc/* Mods
+        mv no_repo/* Mods
         cd Mods
 
         rm -rf Betmma/5_legendary_challenges
@@ -36,7 +43,7 @@ jobs:
         mv BonusBlinds/BonusBlinds/* BonusBlinds/
 
         mv CheesyJokers/CheesyJokers 098_CheesyJokers
-        rmdir CheesyJokers
+        rm -rf CheesyJokers
 
         mv CodexArcanum/mod 098_Codex_Arcanum
         rm -rf CodexArcanum
@@ -59,12 +66,22 @@ jobs:
         mv "SDM0/SDM_0's Stuff" "SDM_0's Stuff"
         rm -rf SDM0
 
+        mv Steamodded/example_mods/
         rm -rf Steamodded/example_mods
+
+        rm -rf 098_Jestobiology/img
+
+        mv MikasBalatro 098_MikasBalatro
+
+        mv Myst/Steamodded/MystJokers 098_MystJokers
+        rm -rf Myst
+
+        curl -L https://raw.githubusercontent.com/happinyz/BalatroFoldButton/main/FoldButton.lua -o .
 
     - name: Universal unwanted files/directories removal
       run: |
         echo "Start deleting redundant files..."
-        rm -rf .git .gitmodules
+        rm -rf .git .gitmodules git-assets
         pushd ./Mods
         find . -maxdepth 2 -type f -iname '*.py' -exec rm -f {} +
         find . -maxdepth 2 -type f -iname 'icon.png' -exec rm -f {} +
@@ -88,8 +105,24 @@ jobs:
         find . -type d -iname '.github' -exec rm -rf {} +
         find . -type d -name 'gitresources' -exec rm -rf {} +
 
-    - name: Upload artifact
+    - name: Construct artifacts
+      run: |
+        mkdir mobile && rsync -av --exclude='mobile' . mobile/
+        mkdir standard && rsync -av --exclude='standard' --exclude='mobile' . standard/
+
+        cd ./mobile/Mods
+        mv mobile_patches/mobile-patch ./
+        rsync -av mobile_patches/patched-shaders/* ./
+        rm -rf mobile_patches
+
+    - name: Upload standard artifact
       uses: actions/upload-artifact@v4.3.3
       with:
-        name: pack_snapshot
-        path: ./
+        name: pack-stan-snapshot-${{ env.TIMESTAMP }}
+        path: ./standard/
+
+    - name: Upload mobile artifact
+      uses: actions/upload-artifact@v4.3.3
+      with:
+        name: pack-mobile-snapshot-${{ env.TIMESTAMP }}
+        path: ./mobile/

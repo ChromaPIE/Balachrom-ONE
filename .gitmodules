@@ -73,3 +73,27 @@
 [submodule "_repos/098_FusionJokers"]
 	path = _repos/098_FusionJokers
 	url = https://github.com/ChromaPIE/Fusion-Jokers.git
+[submodule "_repos/098_JankJonklers"]
+	path = _repos/098_JankJonklers
+	url = https://github.com/ChromaPIE/JankJonklers-ZHCN-Locale.git
+[submodule "_repos/098_Jestobiology"]
+	path = _repos/098_Jestobiology
+	url = https://github.com/ChromaPIE/Jestobiology.git
+[submodule "_repos/Myst"]
+	path = _repos/Myst
+	url = https://github.com/ChromaPIE/BalatroMods.git
+[submodule "_repos/098_PampaJokers"]
+	path = _repos/098_PampaJokers
+	url = https://github.com/ChromaPIE/balatro-pampa-joker-pack.git
+[submodule "_repos/Cartomancer"]
+	path = _repos/Cartomancer
+	url = https://github.com/stupxd/Cartomancer.git
+[submodule "_repos/Nopeus"]
+	path = _repos/Nopeus
+	url = https://github.com/jenwalter666/Nopeus.git
+[submodule "_repos/Talisman"]
+	path = _repos/Talisman
+	url = https://github.com/ChromaPIE/Talisman.git
+[submodule "_repos/StickersAlwaysShown"]
+	path = _repos/StickersAlwaysShown
+	url = https://github.com/SirMaiquis/Balatro-Stickers-Always-Shown.git

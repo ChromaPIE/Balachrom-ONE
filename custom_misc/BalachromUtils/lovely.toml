@@ -1,0 +1,57 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 10099
+
+# Add editions from Bunco, CCC and Betmma's editions to to_neg
+# YKW I lowkey wanna design some fun stuff for them tho.
+[[patches]]
+[patches.pattern]
+target = "main.lua"
+pattern = '''if not (v.name == 'e_negative' and _no_neg) then -- skip return if negative is selected and _no_neg is true'''
+position = "at"
+payload = '''if not ((v.name == 'e_negative' or v.name == 'e_bunc_fluorescent' or v.name == 'e_betm_vouchers_e_phantom' or v.name == 'e_ccc_mirrored') and _no_neg) then -- skip return if negative is selected and _no_neg is true'''
+match_indent = true
+
+# extra check just to prevent crash due to cursed hand level - WIP fix on Talisman's side
+[[patches]]
+[patches.pattern]
+target = "engine/ui.lua"
+pattern = '''if self.config.colour[4] > 0.01 then'''
+position = "at"
+payload = '''
+   if self.config.colour and self.config.colour[4] > 0.01 then
+'''
+match_indent = false
+
+# Type check for eligible_bosses[k]
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+match_indent = false
+pattern = "if eligible_bosses[k] > min_use then"
+position = "at"
+payload = '''
+            if type(eligible_bosses[k]) == "number" and eligible_bosses[k] > min_use then
+'''
+
+# Prevent empty orbital tags crashing the game
+[[patches]]
+[patches.pattern]
+target = "tag.lua"
+match_indent = false
+pattern = "update_hand_text({sound = 'button', volume = 0.7, pitch = 0.8, delay = 0.3}, {"
+position = "before"
+payload = '''
+                if G.GAME.hands[self.ability.orbital_hand] then
+'''
+
+[[patches]]
+[patches.pattern]
+target = "tag.lua"
+match_indent = false
+pattern = "update_hand_text({sound = 'button', volume = 0.7, pitch = 1.1, delay = 0}, {mult = 0, chips = 0, handname = '', level = ''})"
+position = "after"
+payload = '''
+                end
+'''
