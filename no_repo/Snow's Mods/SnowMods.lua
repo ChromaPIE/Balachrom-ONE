@@ -1372,10 +1372,11 @@ SMODS.Joker {
     pos = { x = 0, y = 3 },
     loc_txt = {
         ['en-us'] = {
-            name = "Coin",
+            name = "硬币",
             text = {
-                "Has a {C:green,E:1,S:1.1}#3# in #2#{} chance to gain {C:mult}+#4#{} mult when hand played",
-                "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                "出牌时有{C:green,E:1,S:1.1}#3#/#2#{}的几率",
+                "获得{C:mult}+#4#{}倍率",
+                "{C:inactive}（当前为{C:mult}+#1#{C:inactive}倍率）",
             }
         }
     },
@@ -1588,9 +1589,10 @@ SMODS.Joker {
     pos = { x = 1, y = 3 },
     loc_txt = {
         ['en-us'] = {
-            name = "Ghost Coin",
+            name = "鬼魂硬币",
             text = {
-                "Has a {C:green,E:1,S:1.1}#3# in #2#{} chance to give {C:mult}X#1#{} mult",
+                "有{C:green,E:1,S:1.1}#3#/#2#{}的几率",
+                "给予{X:mult,C:white}X#1#{}倍率",
             }
         }
     },
@@ -1626,9 +1628,10 @@ SMODS.Joker {
     pos = { x = 2, y = 3 },
     loc_txt = {
         ['en-us'] = {
-            name = "Liquid Coin",
+            name = "液体硬币",
             text = {
-                "Has a {C:green,E:1,S:1.1}#3# in #2#{} chance to {C:attention}retrigger{} all jokers",
+                "有{C:green,E:1,S:1.1}#3#/#2#{}的几率",
+                "{C:attention}重新触发{}所有小丑牌",
             }
         }
     },
@@ -1659,9 +1662,10 @@ SMODS.Joker {
     pos = { x = 3, y = 3 },
     loc_txt = {
         ['en-us'] = {
-            name = "Metal Coin",
+            name = "金属硬币",
             text = {
-                "Has a {C:green,E:1,S:1.1}#3# in #2#{} chance to {C:attention}retrigger{} held in hand abilities",
+                "有{C:green,E:1,S:1.1}#3#/#2#{}的几率",
+                "{C:attention}重新触发{}卡牌的{C:attention}留手{}效果",
             }
         }
     },
@@ -1725,10 +1729,10 @@ SMODS.Consumable{
     cost = 3,
     loc_txt = {
         ['en-us'] = {
-            name = "Fuel Cell",
+            name = "燃料电池",
             text = {
-                "Enhances {C:attention}1{} selected card",
-                "into a {C:attention}Platinum card{}.",
+                "将{C:attention}1{}张选定卡牌",
+                "增强为{C:attention}白金牌"
             }
         }
     },
@@ -1743,12 +1747,12 @@ SMODS.Consumable{
 SMODS.Enhancement {
     key = 'platinum_card',
     loc_txt = {
-        name = 'Platinum Card',
+        name = '白金牌',
         text = {
-            "{C:green,E:1,S:1.1}#2# in 6{} chance to",
-            "{C:attention}Retrigger{}",
-            "{C:green,E:1,S:1.1}#2# in 18{} chance",
-            "for {C:green}+#1#{} Probability",
+            "{C:green,E:1,S:1.1}#2#/6{}的几率",
+            "{C:attention}重新触发",
+            "{C:green,E:1,S:1.1}#2#/18{}的几率",
+            "使上述几率{C:green}+#1#",
         }
     },
     pos = {x = 0, y = 0}, 

@@ -63,9 +63,6 @@ jobs:
 
         rm -rf KCVanilla/scripts
 
-        mv "SDM0/SDM_0's Stuff" "SDM_0's Stuff"
-        rm -rf SDM0
-
         rm -rf Steamodded/example_mods
 
         rm -rf 098_Jestobiology/img
@@ -78,6 +75,10 @@ jobs:
         mv 098_BossJokers/BossJokers .
         rm -rf 098_BossJokers
         mv BossJokers 098_BossJokers
+
+        rm -f aiz-balatro-mod/stylua.toml
+
+        mv SoulCraft/soulcraftlovely/lovely.toml SoulCraft/
 
         curl -LO https://raw.githubusercontent.com/happinyz/BalatroFoldButton/main/FoldButton.lua
 
