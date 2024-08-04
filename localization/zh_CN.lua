@@ -128,8 +128,8 @@ return {
             j_golden = {
                 name = "黄金小丑",
                 text = {
-                    "在回合结束时",
-                    "获得{C:money}$#1#{}"
+                    "回合结束时",
+                    "获得{C:money}$#1#"
                 }
             },
             j_stencil = {
@@ -311,9 +311,9 @@ return {
             j_delayed_grat = {
                 name = "先苦后甜",
                 text = {
-                    "如果在回合结束时",
-                    "没有使用弃牌，则每把{C:attention}弃牌{}",
-                    "获得{C:money}$#1#{}"
+                    "若回合内没有使用弃牌",
+                    "每有一次{C:attention}弃牌",
+                    "回合结束时获得{C:money}$#1#"
                 }
             },
             j_hack = {
@@ -2245,9 +2245,9 @@ return {
             m_gold = {
                 name = "黄金牌",
                 text = {
-                    "如果这张卡牌",
-                    "在回合结束时还在手牌中",
-                    "你获得{C:money}$#1#{}"
+                    "若回合结束时",
+                    "{C:attention}仍留在{}手牌中",
+                    "获得{C:money}$#1#"
                 }
             },
             m_lucky = {
@@ -2532,8 +2532,7 @@ return {
             bl_arm = {
                 name = "手臂",
                 text = {
-                    "降低打出的",
-                    "牌型等级"
+                    "降低打出的牌型等级"
                 }
             },
             bl_psychic = {
@@ -3183,9 +3182,10 @@ return {
             blue_seal = {
                 name = "蓝色蜡封",
                 text = {
-                    "如果在回合结束时",
-                    "本牌还{C:attention}留在{}手牌中",
-                    "会生成最后一手牌型的{C:planet}星球牌{}",
+                    "若回合结束时",
+                    "{C:attention}仍留在{}手牌中",
+                    "则生成最后一手出牌",
+                    "对应的{C:planet}星球牌",
                     "{C:inactive}（必须有空位）"
                 }
             },
@@ -4128,7 +4128,7 @@ return {
             c_city_1 = "15分钟都市",
             c_rich_1 = "富者愈富",
             c_knife_1 = "刀锋之上",
-            c_xray_1 = "X光视界",
+            c_xray_1 = "透视眼",
             c_mad_world_1 = "疯狂世界",
             c_luxury_1 = "奢侈税",
             c_non_perishable_1 = "不腐之物",
