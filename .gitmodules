@@ -100,3 +100,6 @@
 [submodule "_repos/098_BossJokers"]
 	path = _repos/098_BossJokers
 	url = https://github.com/ChromaPIE/BossJokers.git
+[submodule "_repos/Galdur"]
+	path = _repos/Galdur
+	url = https://github.com/ChromaPIE/Galdur.git
