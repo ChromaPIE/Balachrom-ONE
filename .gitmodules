@@ -106,3 +106,6 @@
 [submodule "_repos/JankJonklers"]
 	path = _repos/JankJonklers
 	url = https://github.com/ChromaPIE/JankJonklers-ZHCN-Locale.git
+[submodule "_repos/JensBalatroCollection"]
+	path = _repos/JensBalatroCollection
+	url = https://github.com/ChromaPIE/JensBalatroCollection

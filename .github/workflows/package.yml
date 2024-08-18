@@ -80,6 +80,9 @@ jobs:
 
         mv SoulCraft/soulcraftlovely/lovely.toml SoulCraft/
 
+        mv JensBalatroCollection\Nopeus .
+        rm -rf JensBalatroCollection
+
         curl -LO https://raw.githubusercontent.com/happinyz/BalatroFoldButton/main/FoldButton.lua
 
     - name: Universal unwanted files/directories removal
