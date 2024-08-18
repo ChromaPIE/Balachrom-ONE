@@ -117,11 +117,16 @@ jobs:
         mkdir mobile && rsync -av --exclude='mobile' . mobile/
         mkdir standard && rsync -av --exclude='standard' --exclude='mobile' . standard/
 
-        cd ./mobile/Mods
+        pushd ./mobile/Mods
         mv mobile_patches/mobile-patch ./
         rsync -av mobile_patches/patched-shaders/* ./
         rm -rf mobile_patches
+        popd
 
+        pushd ./standard
+        rm -rf Mods/mobile_patches
+        rm -rf resources/shaders
+        
     - name: Upload standard artifact
       uses: actions/upload-artifact@v4.3.3
       with:
