@@ -80,7 +80,7 @@ jobs:
 
         mv SoulCraft/soulcraftlovely/lovely.toml SoulCraft/
 
-        mv JensBalatroCollection\Nopeus .
+        mv JensBalatroCollection/Nopeus .
         rm -rf JensBalatroCollection
 
         curl -LO https://raw.githubusercontent.com/happinyz/BalatroFoldButton/main/FoldButton.lua
