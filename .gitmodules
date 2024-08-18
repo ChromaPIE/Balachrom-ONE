@@ -103,3 +103,6 @@
 [submodule "_repos/Galdur"]
 	path = _repos/Galdur
 	url = https://github.com/ChromaPIE/Galdur.git
+[submodule "_repos/JankJonklers"]
+	path = _repos/JankJonklers
+	url = https://github.com/ChromaPIE/JankJonklers-ZHCN-Locale.git
